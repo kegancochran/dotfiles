@@ -1,0 +1,27 @@
+[submodule ".vim/plugged/vim-surround"]
+	path = .vim/plugged/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/plugged/vim-sensible"]
+	path = .vim/plugged/vim-sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule ".vim/plugged/targets.vim"]
+	path = .vim/plugged/targets.vim
+	url = https://github.com/wellle/targets.vim
+[submodule ".vim/plugged/nerdtree"]
+	path = .vim/plugged/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "plugins/nord-tmux"]
+	path = plugins/nord-tmux
+	url = https://github.com/arcticicestudio/nord-tmux
+[submodule "plugins/tmux-sensible"]
+	path = plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible
+[submodule "plugins/tmux-resurrect"]
+	path = plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "plugins/tmux-continuum"]
+	path = plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
+[submodule "plugins/tpm"]
+	path = plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
