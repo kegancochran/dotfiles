@@ -9,7 +9,7 @@
 	call plug#end()
 
 " Options
-	" Netew tweaks
+	" Netrw tweaks
 		let g:netrw_banner = 0
 		let g:netrw_liststyle = 3
 		let g:netrw_browse_split = 4
@@ -55,4 +55,6 @@
 
 " Hotkeys
 	" Insert timestamp at beginning of file
-		nmap <F3> ggO<Esc>0Di[<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>]<CR><Esc>
+		nmap <F3> ggO<Esc>0Di# [<C-R>=strftime("%Y-%m-%d")<CR>]<CR><Esc>
+	" Insert time at cursor position 
+		nmap <F5> i[<C-R>=strftime("%H:%M:%S")<CR>]<Esc>
