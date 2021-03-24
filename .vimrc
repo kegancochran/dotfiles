@@ -9,17 +9,13 @@
 	call plug#end()
 
 " Options
-	" Netrw tweaks
-		let g:netrw_banner = 0
-		let g:netrw_liststyle = 3
-		let g:netrw_browse_split = 4
-		let g:netrw_altv = 1
-		let g:netrw_winsize = 25
-		augroup ProjectDrawer
-			  autocmd!
-				autocmd VimEnter * :Vexplore
-		augroup END
-
+	" NERDTree
+		"Quit vim if NERDTree is only window left
+		autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+		    \ quit | endif
+		"Start NERDTree upon starting vim, put cursor in other window
+		autocmd VimEnter * NERDTree | wincmd p
+		
 	" Enable syntax
 		syntax on
 
