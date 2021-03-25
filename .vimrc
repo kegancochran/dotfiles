@@ -13,9 +13,19 @@
 		"Quit vim if NERDTree is only window left
 		autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
 		    \ quit | endif
-		"Start NERDTree upon starting vim, put cursor in other window
-		autocmd VimEnter * NERDTree | wincmd p
-		
+
+		" Start NERDTree. If a file is specified, move the cursor to its window.
+		autocmd StdinReadPre * let s:std_in=1
+		autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+		" enable indentation
+			set breakindent
+
+		" indent by an additional 2 characters on wrapped lines, when line >= 40 characters, put 'showbreak' at start of line
+			set breakindentopt=shift:0,min:20,sbr
+			
+			set showbreak=
+
 	" Enable syntax
 		syntax on
 
