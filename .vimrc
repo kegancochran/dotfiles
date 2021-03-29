@@ -60,7 +60,7 @@
 		endif
 
 " Hotkeys
-	" Insert timestamp at beginning of file
-		nmap <F3> ggO<Esc>0Di# [<C-R>=strftime("%Y-%m-%d")<CR>]<CR><Esc>
+	" Insert timestamp at cursor position 
+		nmap <F3> i[<C-R>=strftime("%Y-%m-%d")<CR>]<CR><Esc>
 	" Insert time at cursor position 
 		nmap <F5> i[<C-R>=strftime("%H:%M:%S")<CR>]<Esc>
